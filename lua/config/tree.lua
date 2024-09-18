@@ -15,7 +15,9 @@ local function my_on_attach(bufnr)
 
 require("nvim-tree").setup {
     on_attach = my_on_attach,
-    view = { adaptive_size = true },
+    view = {
+        adaptive_size = true,
+    },
     sync_root_with_cwd = true,
 }
 

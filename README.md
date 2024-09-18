@@ -8,10 +8,11 @@ Ready to use Neovim config files.
 - (Optional) Install [ripgrep](https://github.com/BurntSushi/ripgrep)
 - Install [LazyGit](https://github.com/jesseduffield/lazygit)
     - Replace user's `lazygit` directory with the one on this repo
-- Install language servers (more [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)):
+- (Optional) Install language servers (more [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)):
     - eslint `npm i -g vscode-langservers-extracted`
     - tsserver `npm i -g typescript typescript-language-server`
-- Install formatters (more [here](https://github.com/sbdchd/neoformat?tab=readme-ov-file)):
+    - jdtls (See its configuration [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jdtls))
+- (Optional) Install formatters (more [here](https://github.com/sbdchd/neoformat?tab=readme-ov-file)):
     - prettier-eslint `npm i -g prettier-eslint-cli`
 - Enjoy!
 

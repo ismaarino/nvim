@@ -57,7 +57,7 @@ local function goto_bottom()
     vim.cmd('$')
 end
 vim.keymap.set({'n', 'v', 's', 't'}, '<S-j>', goto_bottom, { desc = 'Go to bottom' })
-
 vim.keymap.set({'n', 'v', 's', 't'}, '<S-k>', 'gg', { desc = 'Go to top' })
 
-
+vim.keymap.set({ "n", "v" }, "<Tab>", ">>", { desc = "Tabulate Out" })
+vim.keymap.set({ "n", "v" }, "<S-Tab>", "<<", { desc = "Tabulate In" })

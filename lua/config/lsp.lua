@@ -53,7 +53,7 @@ local cmp = require'cmp'
   })
 
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline(':', {
+cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
       { name = 'path' }
@@ -63,27 +63,18 @@ local cmp = require'cmp'
     matching = { disallow_symbol_nonprefix_matching = false }
   })
 
-vim.keymap.set({'n'}, ',', vim.lsp.buf.definition, { desc = 'Go to symbol implementation' })
+vim.keymap.set({'n'}, '.', vim.lsp.buf.definition, { desc = 'Go to symbol definition' })
+vim.keymap.set({'n'}, '<leader>.', vim.lsp.buf.code_action, { desc = 'Code Actions' })
 
 -- LSP Config -- 
-local navbuddy = require("nvim-navbuddy")
-
 local function open_navbuddy()
     vim.cmd('Navbuddy')
 end
-vim.keymap.set({'n'}, '.', open_navbuddy, { desc = 'Open NavBuddy' })
+vim.keymap.set({'n'}, '<leader>,', open_navbuddy, { desc = 'Open NavBuddy' })
 
-require'lspconfig'.biome.setup {
-    on_attach = function(client, bufnr)
-        navbuddy.attach(client, bufnr)
-    end
-}
+require'lspconfig'.biome.setup {}
 
-require'lspconfig'.tsserver.setup {
-    on_attach = function(client, bufnr)
-        navbuddy.attach(client, bufnr)
-    end
-}
+require'lspconfig'.tsserver.setup {}
 
 require'lspconfig'.eslint.setup({
   on_attach = function(client, bufnr)
@@ -94,4 +85,5 @@ require'lspconfig'.eslint.setup({
   end,
 })
 
+require'lspconfig'.jdtls.setup{}
 
