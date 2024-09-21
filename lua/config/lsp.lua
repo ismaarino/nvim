@@ -85,5 +85,8 @@ require'lspconfig'.eslint.setup({
   end,
 })
 
-require'lspconfig'.jdtls.setup{}
+require'lspconfig'.jdtls.setup {}
 
+require'lspconfig'.omnisharp.setup {
+    cmd = { "OmniSharp" },
+}
