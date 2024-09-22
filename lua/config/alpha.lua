@@ -3,7 +3,7 @@ local dashboard = require("alpha.themes.dashboard")
 
 math.randomseed(os.time())
 
-function getEmogi()
+function getFooter()
     local strings = {
         "(┛ಠДಠ)┛彡┻━┻" ,
         "“The best error message is the one that never shows up.“",
@@ -21,24 +21,23 @@ end
 
 -- Set header
 dashboard.section.header.val = {
-    "                                        ",
-    "                                        ",
-    "                                        ",
-    "                                        ",
-    "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄",
-    "██░▀██░██░▄▄▄██░▄▄▄░██░███░█▄░▄██░▄▀▄░██",
-    "██░█░█░██░▄▄▄██░███░███░█░███░███░█░█░██",
-    "██░██▄░██░▀▀▀██░▀▀▀░███▄▀▄██▀░▀██░███░██",
-    "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀",
-    "                                        ",
-    "                                        ",
+    "                               ",
+    "                               ",
+    "                               ",
+    "                               ",
+    "                               ",
+    " _  _ ___ _____   _____ __  __ ",
+    "| \\| | __/ _ \\ \\ / /_ _|  \\/  |",
+    "| .` | _| (_) \\ V / | || |\\/| |",
+    "|_|\\_|___\\___/ \\_/ |___|_|  |_|",
+    "                               ",
 }
 
 -- Set menu
 dashboard.section.buttons.val = {}
 
 dashboard.section.footer.val = {
-    getEmogi(),
+    getFooter(),
 }
 
 -- Send config to alpha
