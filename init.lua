@@ -14,8 +14,7 @@ vim.cmd("set shiftround")
 vim.cmd("set expandtab")
 vim.cmd("set hidden")
 
-vim.cmd("set ignorecase")
-vim.cmd("set smartcase")
+vim.cmd("set fileformats=unix")
 
 vim.cmd("set spelllang=en,es")
     
