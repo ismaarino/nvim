@@ -32,6 +32,7 @@ require("config.alpha") -- Dashboard https://github.com/goolord/alpha-nvim --
 require("config.lsp") -- LSP Config --
 require("config.format") -- Formatters Config --
 require("config.git") -- Git integration in editor https://github.com/lewis6991/gitsigns.nvim --
+require("config.codecompanion") -- AI Copilot https://github.com/olimorris/codecompanion.nvim --
 
 vim.cmd("colorscheme tokyonight-moon")
 vim.cmd("AirlineTheme base16")
