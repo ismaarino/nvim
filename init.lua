@@ -1,41 +1,43 @@
-vim.cmd("set title")
-vim.cmd("set number")
-vim.cmd("set relativenumber")
-vim.cmd("set mouse=a")
+vim.cmd('set title')
+vim.cmd('set number')
+vim.cmd('set relativenumber')
+vim.cmd('set mouse=a')
 
-vim.cmd("set cursorline")
+vim.cmd('set cursorline')
 
-vim.cmd("set list")
-vim.cmd("set listchars=tab:»·,trail:·,space:·")
-vim.cmd("set tabstop=4")
-vim.cmd("set shiftwidth=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftround")
-vim.cmd("set expandtab")
-vim.cmd("set hidden")
+vim.cmd('set list')
+vim.cmd('set listchars=tab:»·,trail:·,space:·')
+vim.cmd('set tabstop=4')
+vim.cmd('set shiftwidth=4')
+vim.cmd('set softtabstop=4')
+vim.cmd('set shiftround')
+vim.cmd('set expandtab')
+vim.cmd('set hidden')
+vim.cmd('set ignorecase')
+vim.cmd('set smartcase')
 
-vim.cmd("set clipboard+=unnamedplus")
+vim.cmd('set clipboard+=unnamedplus')
 
-vim.cmd("set fileformats=unix")
+vim.cmd('set fileformats=unix')
 
-vim.cmd("set spelllang=en,es")
+vim.cmd('set spelllang=en,es')
     
-vim.cmd("set termguicolors")
-vim.cmd("set background=dark")
+vim.cmd('set termguicolors')
+vim.cmd('set background=dark')
 
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
 
-require("config.lazy") -- Lazy Package Manager https://github.com/folke/lazy.nvim --
-require("config.tree") -- Lazy Package Manager https://github.com/folke/lazy.nvim --
-require("config.telescope") -- Telescope File Finder https://github.com/nvim-telescope/telescope.nvim --
-require("config.alpha") -- Dashboard https://github.com/goolord/alpha-nvim --
-require("config.lsp") -- LSP Config --
-require("config.format") -- Formatters Config --
-require("config.git") -- Git integration in editor https://github.com/lewis6991/gitsigns.nvim --
-require("config.codecompanion") -- AI Copilot https://github.com/olimorris/codecompanion.nvim --
+require('config.lazy') -- Lazy Package Manager https://github.com/folke/lazy.nvim --
+require('config.tree') -- Lazy Package Manager https://github.com/folke/lazy.nvim --
+require('config.telescope') -- Telescope File Finder https://github.com/nvim-telescope/telescope.nvim --
+require('config.alpha') -- Dashboard https://github.com/goolord/alpha-nvim --
+require('config.lsp') -- LSP Config --
+require('config.format') -- Formatters Config --
+require('config.git') -- Git integration in editor https://github.com/lewis6991/gitsigns.nvim --
+require('config.codecompanion') -- AI Copilot https://github.com/olimorris/codecompanion.nvim --
 
-vim.cmd("colorscheme tokyonight-moon")
-vim.cmd("AirlineTheme base16")
+vim.cmd('colorscheme tokyonight-moon')
+vim.cmd('AirlineTheme base16')
 
 local function exit()
     vim.cmd('qa')
@@ -61,5 +63,5 @@ end
 vim.keymap.set({'n', 'v', 's', 't'}, '<S-j>', goto_bottom, { desc = 'Go to bottom' })
 vim.keymap.set({'n', 'v', 's', 't'}, '<S-k>', 'gg', { desc = 'Go to top' })
 
-vim.keymap.set({ "n", "v" }, "<Tab>", ">>", { desc = "Tabulate Out" })
-vim.keymap.set({ "n", "v" }, "<S-Tab>", "<<", { desc = "Tabulate In" })
+vim.keymap.set({ 'n', 'v' }, '<Tab>', '>>', { desc = 'Tabulate Out' })
+vim.keymap.set({ 'n', 'v' }, '<S-Tab>', '<<', { desc = 'Tabulate In' })
