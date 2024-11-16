@@ -74,7 +74,7 @@ vim.keymap.set({'n'}, '<leader>,', open_navbuddy, { desc = 'Open NavBuddy' })
 
 require'lspconfig'.biome.setup {}
 
-require'lspconfig'.tsserver.setup {}
+require'lspconfig'.ts_lsp.setup {}
 
 require'lspconfig'.eslint.setup({
   on_attach = function(client, bufnr)
