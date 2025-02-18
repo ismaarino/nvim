@@ -19,6 +19,9 @@ require("nvim-tree").setup {
         adaptive_size = true,
     },
     sync_root_with_cwd = true,
+    filters = {
+        git_ignored = false,
+    },
 }
 
 local function toggle_or_focus_nvimtree()

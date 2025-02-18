@@ -1,6 +1,5 @@
 vim.cmd('set title')
 vim.cmd('set number')
-vim.cmd('set relativenumber')
 vim.cmd('set mouse=a')
 
 vim.cmd('set cursorline')
@@ -16,8 +15,6 @@ vim.cmd('set hidden')
 vim.cmd('set ignorecase')
 vim.cmd('set smartcase')
 
-vim.cmd('set clipboard+=unnamedplus')
-
 vim.cmd('set fileformats=unix')
 
 vim.cmd('set spelllang=en,es')
@@ -31,16 +28,16 @@ require('config.lazy') -- Lazy Package Manager https://github.com/folke/lazy.nvi
 require('config.tree') -- Lazy Package Manager https://github.com/folke/lazy.nvim --
 require('config.telescope') -- Telescope File Finder https://github.com/nvim-telescope/telescope.nvim --
 require('config.alpha') -- Dashboard https://github.com/goolord/alpha-nvim --
-require('config.lsp') -- LSP Config --
+-- require('config.lsp') -- LSP Config --
 require('config.format') -- Formatters Config --
 require('config.git') -- Git integration in editor https://github.com/lewis6991/gitsigns.nvim --
 require('config.codecompanion') -- AI Copilot https://github.com/olimorris/codecompanion.nvim --
 
-vim.cmd('colorscheme tokyonight-moon')
+vim.cmd('colorscheme nordic')
 vim.cmd('AirlineTheme base16')
 
 local function exit()
-    vim.cmd('qa')
+    vim.cmd('qa!')
 end
 vim.keymap.set({'n', 'v', 's', 't'}, '<leader><Del>', exit, { desc = 'Exit All' })
 
