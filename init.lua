@@ -28,10 +28,16 @@ require('config.lazy') -- Lazy Package Manager https://github.com/folke/lazy.nvi
 require('config.tree') -- Lazy Package Manager https://github.com/folke/lazy.nvim --
 require('config.telescope') -- Telescope File Finder https://github.com/nvim-telescope/telescope.nvim --
 require('config.alpha') -- Dashboard https://github.com/goolord/alpha-nvim --
--- require('config.lsp') -- LSP Config --
+require('config.lsp') -- LSP Config --
+-- require('config.lsp.biome')
+-- require('config.lsp.eslint')
+-- require('config.lsp.jdtls')
+-- require('config.lsp.ts_lsp')
+-- require('config.lsp.omnisharp')
+-- require('config.lsp.ccls')
 require('config.format') -- Formatters Config --
 require('config.git') -- Git integration in editor https://github.com/lewis6991/gitsigns.nvim --
-require('config.codecompanion') -- AI Copilot https://github.com/olimorris/codecompanion.nvim --
+-- require('config.codecompanion') -- AI Copilot https://github.com/olimorris/codecompanion.nvim --
 
 vim.cmd('colorscheme nordic')
 vim.cmd('AirlineTheme base16')

@@ -71,34 +71,3 @@ local function open_navbuddy()
     vim.cmd('Navbuddy')
 end
 vim.keymap.set({'n'}, '<leader>,', open_navbuddy, { desc = 'Open NavBuddy' })
-
-require'lspconfig'.biome.setup {}
-
-require'lspconfig'.ts_lsp.setup {}
-
-require'lspconfig'.eslint.setup({
-  on_attach = function(client, bufnr)
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      buffer = bufnr,
-      command = "EslintFixAll",
-    })
-  end,
-})
-
-require'lspconfig'.jdtls.setup {}
-
-require'lspconfig'.omnisharp.setup {
-    cmd = { "OmniSharp" },
-}
-
-require'lspconfig'.ccls.setup {
-  init_options = {
-    compilationDatabaseDirectory = "build";
-    index = {
-      threads = 0;
-    };
-    clang = {
-      excludeArgs = { "-frounding-math"} ;
-    };
-  }
-}
