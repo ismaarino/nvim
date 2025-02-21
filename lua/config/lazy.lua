@@ -164,15 +164,6 @@ local plugins = {
         },
         config = true
     },
-    {
-        "ismaarino/mirror.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-        } ,
-        opts = {
-            name = "Max",
-        }
-    },
 }
 
 local opts = { }

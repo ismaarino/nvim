@@ -34,7 +34,7 @@ require('config.lsp') -- LSP Config --
 -- require('config.lsp.jdtls')
 -- require('config.lsp.ts_lsp')
 -- require('config.lsp.omnisharp')
--- require('config.lsp.ccls')
+require('config.lsp.ccls')
 require('config.format') -- Formatters Config --
 require('config.git') -- Git integration in editor https://github.com/lewis6991/gitsigns.nvim --
 -- require('config.codecompanion') -- AI Copilot https://github.com/olimorris/codecompanion.nvim --
